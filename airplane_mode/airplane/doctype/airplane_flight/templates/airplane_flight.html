@@ -1,0 +1,28 @@
+{% extends "templates/web.html" %}
+    
+
+{% block page_content %}
+<!-- <h1>{{ title |e }}</h1> -->
+    
+    <!-- <h1>Check For The Flights.....</h1> -->
+     
+    <h2>{{doc.airplane}}</h2>
+    <h3>Flight Details.....</h3>
+    <ul>
+        <li>Airline : {{airline}}</li>
+        <li>{{doc.source_airport_code}} -> {{doc.destination_airport_code}}</li>
+        <li>{{frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY")}}|{{doc.time_of_departure}}|</li>
+        <li>Duration : {{frappe.utils.format_duration(doc.duration)}}</li>
+    </ul>
+   
+    
+    
+
+    <a class="btn btn-info" href="/ticket-booking-web-form">Book Flight</a>
+    <!-- href="/webform/new?airplane_flight={{doc.airplane}}" -->
+
+    
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

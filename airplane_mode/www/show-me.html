@@ -1,0 +1,13 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+    <!-- <h1>Hello!</h1> -->
+    <!-- <p>Welcome to our website!</p> -->
+    {% set color = frappe.form_dict.get('color', 'black') %}
+
+    <div style="width: 50%; height: 200px; background-color : {{ color }}">
+    </div>
+   <!-- {% set color = frappe.form_dict.get('color','black') %}-->
+
+
+{% endblock %}
