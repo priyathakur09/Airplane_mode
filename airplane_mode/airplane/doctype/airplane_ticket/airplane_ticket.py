@@ -75,6 +75,11 @@ class AirplaneTicket(Document):
             frappe.throw("All seats are booked or not available.")
         self.seat = random.choice(available_seats)
 
+        #assign random gate number
+        random_integers = random.randint(1, 5)
+        random_alphabets = random.choice(['Gate'])
+        self.gate_number = f"{random_alphabets} {random_integers}"
+
     def get_available_seats(self):
         """Generate random seat and check if it's already booked."""
         available_seats = []
@@ -106,3 +111,7 @@ class AirplaneTicket(Document):
         # Check if total tickets exceed airplane capacity
         if total_tickets >= airplane.capacity:
             frappe.throw(f"Cannot book ticket as the flight has only {airplane.capacity} seats, and all are booked.")
+
+
+
+

@@ -10,6 +10,7 @@
   "source_airport_code",
   "destination_airport_code",
   "ticket_status",
+  "gate_number",
   "column_break_nozy",
   "flight",
   "flight_price",
@@ -139,12 +140,18 @@
    "fieldtype": "Link",
    "label": "Airplane",
    "options": "Airplane"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-18 10:40:24.912112",
+ "modified": "2024-11-07 10:28:27.887554",
  "modified_by": "Administrator",
  "module": "airplane",
  "name": "Airplane Ticket",
